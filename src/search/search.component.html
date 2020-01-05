@@ -1,0 +1,83 @@
+<section class="page-section">
+    <header>
+        <div class="logo">
+            <p><span>Ranked</span>&nbsp;<span>Health</span><span>Care</span></p>
+        </div>
+    </header>
+
+    <div>
+        <div class="logo">
+            <p class="subText">Get treatment from top providers, save up to 50%</p>
+        </div>
+        <form>
+            <div class="form-fields-container">
+                <div class="form-division">
+                    <label class="input-control" for="medicalfield">
+                        Select medical field:
+                        <select id="medicalfield">
+                            <option value="aesthetics">Aesthetics</option>
+                            <option value="option">Option</option>
+                            <option value="option">Option</option>
+                            <option value="option">Option</option>
+                            <option value="option">Option</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-division">
+                    <label class="input-control" for="zipcode">
+                        Enter Zipcode:
+                        <input type="text" id="zipcode" placeholder="Enter Zipcode" />
+                        <span>Or <a href="#">Use current location</a></span>
+                    </label>
+                </div>
+                <div class="form-division">
+                    <label class="input-control" for="time">
+                        Select time:
+                        <select id="time">
+                            <option value="9-12">9 AM - 12 PM</option>
+                            <option value="12-3">12 PM - 3 PM</option>
+                            <option value="3-6">3 PM - 6 PM</option>
+                            <option value="6-9">6 PM - 9 PM</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-division">
+                    <label class="input-control" for="day">
+                        Select day:
+                        <div class="group">
+                            <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="dp"
+                                [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+                            <i class="fa fa-calendar" aria-hidden="true" (click)="d.toggle()"></i>
+                        </div>
+                    </label>
+                </div>
+                <div class="form-division procedures">
+                    <label class="input-control">
+                        Choose procedures:
+                        <div class="procedure-container">
+                            <label [for]="procedure.label" *ngFor="let procedure of procedures">
+                                <input type="checkbox" [name]="procedure.label" id="procedure.label" [checked]="procedure.checked" />
+                                {{procedure.label}}
+                            </label>
+                        </div>
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button class="main-button reset" type="submit">Reset</button>
+                    <button class="main-button" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="results-list">
+            <h2>Search results:</h2>
+            <article *ngFor="let data of healthCareList">
+                <img [src]="data.image" [alt]="data.name">
+                <div>
+                    <h5>{{data.name}}</h5>
+                    <p>{{data.description}}</p>
+                </div>
+            </article>
+            <button class="main-button" type="submit">Get Started</button>
+        </div>
+    </div>
+</section>

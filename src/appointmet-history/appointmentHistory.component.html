@@ -1,0 +1,26 @@
+<section class="page-section">
+    <header>
+        <div class="logo">
+            <p><span>Ranked</span>&nbsp;<span>Health</span><span>Care</span></p>
+        </div>
+    </header>
+
+    <div>
+        <div class="logo">
+            <p class="subText">Get treatment from top providers, save up to 50%</p>
+        </div>
+        <div class="results-list">
+            <h2>My Appointment List:</h2>
+            <article *ngFor="let data of appointmentList">
+                <h4>{{data.something}}</h4>
+                <p><b>Address: </b> {{data.address}}</p>
+                <p><b>Schedule:</b></p>
+                <div *ngFor="let schedule of data.schedules; let i = index">
+                    <p>{{i + 1}} {{schedule.date}}, {{schedule.time}}</p>
+                    <p>- {{schedule.procedure}} - {{schedule.fee}} ({{schedule.discountPercent}}% discount) = {{schedule.discountedFee}}</p>
+                    <br />
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

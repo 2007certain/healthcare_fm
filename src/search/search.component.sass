@@ -1,0 +1,119 @@
+section.page-section > div
+    padding: 50px 0
+
+.subText
+    font-weight: 300
+    margin-top: 15px
+    color: #bbbbbb
+
+.logo
+    margin: 0
+
+article
+    background: #ffffff
+    padding: 15px
+    border-radius: 4px
+    box-shadow: 0 0 2px rgba(0,0,0,0.4)
+    text-align: left
+    display: flex
+    position: relative
+    margin-bottom: 15px
+
+article img
+    margin-right: 10px
+    max-width: 125px
+
+article h5
+    color: #232323
+    margin: 0 0 5px 0
+    font-size: 16px
+
+article p
+    color: #7e7e7e
+    font-size: 14px
+
+form
+    margin: 0 auto
+    display: block!important
+    margin-top: 50px
+    width: 90%!important
+
+.form-fields-container
+    display: flex!important
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-bottom: 25px
+    padding: 15px
+    background: rgba(255,255,255,1)
+    border-radius: 4px
+
+.form-division
+    width: 25%
+    text-align: left
+    margin-bottom: 15px
+    padding: 0 5px
+
+.input-control span
+    font-size: 12px
+
+.input-control select, .input-control input[type="text"], .input-control input[type="password"]
+    padding: 10px
+    margin: 10px 0
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2)
+    border-radius: 4px
+
+.group
+    display: flex
+    position: relative
+    i
+        position: absolute
+        z-index: 9
+        top: 20px
+        right: 10px
+        cursor: pointer
+    ngb-datepicker
+        z-index: 9
+        background: #fff
+
+.procedures
+    max-width: 100%
+    width: 100%
+    .procedure-container
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+
+.buttons
+    *
+        width: auto
+        margin-right: 15px
+        padding: 10px 25px
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3)
+    .reset
+        background: transparent
+        color: #8ac0b5
+        border: 1px solid #8ac0b5
+
+.results-list
+    width: 90%
+    margin: 0 auto
+    h2
+        font-weight: 300
+        text-align: left
+        margin-bottom: 10px
+
+@media ( max-width: 960px )
+    .form-division
+        width: 50%
+
+    .procedures
+        width: 100%
+
+    
+@media ( max-width: 480px )
+    .form-division
+        width: 100%
+        padding: 0
+
+    .procedures
+        width: 100%
